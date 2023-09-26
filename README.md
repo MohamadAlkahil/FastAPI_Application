@@ -6,9 +6,10 @@ This Python project simulates rovers navigating a minefield represented as a 2D 
 ## Video Demo
 
 ## Operator
-
+The operator interacts with the server by making HTTP requests to its endpoints. It allows the end user to perform various operations on the map, mines, and rovers, such as retrieving information, updating dimensions, creating/deleting objects, and dispatching rovers on their paths. The operator provides a menu of options for the end user to choose from and displays server responses in a readable and user-friendly manner.
 
 ## Server
+The FastAPI HTTP server provides various endpoints that are to be used by the operator to control the rover. These endpoints allow the operator to create, modify, delete, or dispatch rovers and control them in real-time. The communication between the server and the operator is done using JSON format. The server is deployed as a local container through Docker and then hosted as a web app on Azure.
 
 ### Endpoints
 
