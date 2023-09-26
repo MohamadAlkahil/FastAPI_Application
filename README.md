@@ -17,42 +17,41 @@ The FastAPI HTTP server provides various endpoints that are to be used by the op
 
 * GET `/map` - Retrieves the 2D array of the field.
 
-##### PUT `/map`
-Updates the height and width of the field.
+* PUT `/map`: Updates the height and width of the field.
 
 #### Mines
 
-##### GET `/mines`
+* GET `/mines`
 Retrieves the list of all mines, including their serial numbers and coordinates.
 
-##### GET `/mines/:id`
+* GET `/mines/:id`
 Retrieves a specific mine by its ID.
 
-##### DELETE `/mines/:id`
+* DELETE `/mines/:id`
 Deletes a specific mine by its ID.
 
-##### POST `/mines`
+* POST `/mines`
 Creates a new mine with coordinates and a serial number.
 
-##### PUT `/mines/:id`
+* PUT `/mines/:id`
 Updates a specific mine's coordinates and serial number.
 
 #### Rovers
 
-##### GET `/rovers`
+* GET `/rovers`
 Retrieves the list of all rovers, including their IDs and statuses.
 
-##### GET `/rovers/:id`
+* GET `/rovers/:id`
 Retrieves a specific rover by its ID, including its status, position, and list of commands.
 
-##### POST `/rovers`
+* POST `/rovers`
 Creates a new rover with a list of commands.
 
-##### DELETE `/rovers/:id`
+* DELETE `/rovers/:id`
 Deletes a specific rover by its ID.
 
-##### PUT `/rovers/:id`
+* PUT `/rovers/:id`
 Sends a list of commands to a rover by its ID.
 
-##### POST `/rovers/:id/dispatch`
+* POST `/rovers/:id/dispatch`
 Dispatches a rover by its ID, providing information on its status, position, and executed commands.
