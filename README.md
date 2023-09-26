@@ -6,14 +6,14 @@ This Python project simulates rovers navigating a minefield represented as a 2D 
 ## Video Demo
 
 ## Operator
-The operator interacts with the server by making HTTP requests to its endpoints. It allows the end user to perform various operations on the map, mines, and rovers, such as retrieving information, updating dimensions, creating/deleting objects, and dispatching rovers on their paths. The operator provides a menu of options for the end user to choose from and displays server responses in a readable and user-friendly manner.
+The Operator acts as a command-line interface, facilitating interaction between end-users and the rover simulation. This component lets users control the rovers by issuing commands through the terminal. It communicates with the Server via HTTP requests, enabling various operations on the map, mines, and rovers. The Operator, designed for user-friendliness, presents a menu that simplifies the selection of actions and ensures that server responses are presented in an understandable format.
 
 ## Server
-The FastAPI HTTP server provides various endpoints that are to be used by the operator to control the rover. These endpoints allow the operator to create, modify, delete, or dispatch rovers and control them in real-time. The communication between the server and the operator is done using JSON format. The server is deployed as a local container through Docker and then hosted as a web app on Azure.
+The Server is implemented using FastAPI, a Python web framework. It provides a set of endpoints to control and manage the rover simulation. These endpoints are accessible through HTTP requests. The Server and the Operator communicate using the JSON data format, ensuring seamless data exchange. The Server is responsible for handling rover commands and managing the map, mines, and rover statuses. This component was deployed as a local Docker container and is subsequently hosted as a web application on the Azure platform.
 
 ### Endpoints
 
-#### Map
+#### Map Endpoints
 
 * GET `/map`
   Retrieves the 2D array of the field.
@@ -21,7 +21,7 @@ The FastAPI HTTP server provides various endpoints that are to be used by the op
 * PUT `/map`
   Updates the height and width of the field.
 
-#### Mines
+#### Mines Endpoints
 
 * GET `/mines`
 Retrieves the list of all mines, including their serial numbers and coordinates.
@@ -38,7 +38,7 @@ Creates a new mine with coordinates and a serial number.
 * PUT `/mines/:id`
 Updates a specific mine's coordinates and serial number.
 
-#### Rovers
+#### Rovers Endpoints
 
 * GET `/rovers`
 Retrieves the list of all rovers, including their IDs and statuses.
