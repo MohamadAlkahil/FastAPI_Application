@@ -15,7 +15,7 @@ The FastAPI HTTP server provides various endpoints that are to be used by the op
 
 #### Map
 
-GET `/map` - Retrieves the 2D array of the field.
+* GET `/map` - Retrieves the 2D array of the field.
 
 ##### PUT `/map`
 Updates the height and width of the field.
