@@ -4,6 +4,7 @@
 This Python project simulates rovers navigating a minefield represented as a 2D array, where each cell contains either a mine (non-zero) or is empty (zero). The rover can follow commands like turning left (L), turning right (R), moving forward (M), and digging (D). The code sequentially processes each rover's commands, starting at the initial position (0,0) facing south, and calculates the rover's path on the map. It marks the path with "*" symbols and handles scenarios where rovers encounter mines. If a rover doesn't dig a mine and moves, the mine explodes, and the remaining commands are ignored. The project is split into a Server and an Operator. The FastAPI HTTP server provides various endpoints that are to be used by the operator to control the rover. The server is deployed as a local container through Docker and then hosted as a web app on Azure.  The operator is a command line interface that takes keyboard inputs from the application's end user to control the rover. 
 
 ## Video Demo
+https://www.youtube.com/watch?v=TcWUQnB_nxE
 
 ## Operator
 The Operator acts as a command-line interface, facilitating interaction between end-users and the rover simulation. This component lets users control the rovers by issuing commands through the terminal. It communicates with the Server via HTTP requests, enabling various operations on the map, mines, and rovers. The Operator, designed for user-friendliness, presents a menu that simplifies the selection of actions and ensures that server responses are presented in an understandable format.
